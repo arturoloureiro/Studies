@@ -12,10 +12,22 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.studies.ui.theme.StudiesTheme
+import com.google.firebase.Firebase
+import com.google.firebase.analytics.FirebaseAnalytics
+
 
 class MainActivity : ComponentActivity() {
+
+    private lateinit var firebaseAnalytics: FirebaseAnalytics
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        firebaseAnalytics = FirebaseAnalytics.getInstance(this)
+
+        Firebase
+
         enableEdgeToEdge()
         setContent {
             StudiesTheme {
